@@ -53,7 +53,7 @@ export default defineSchema({
     paidByUserId: v.id("users"),
     receivedByUserId: v.id("users"),
     groupId: v.optional(v.id("groups")),
-    relatedExpenseId: v.optional(v.id("expenses")),
+    relatedExpenseIds: v.optional(v.array(v.id("expenses"))),
     createdBy: v.id("users"),
   })
     .index("by_group", ["groupId"])
