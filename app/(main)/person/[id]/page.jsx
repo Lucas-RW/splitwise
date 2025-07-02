@@ -81,6 +81,7 @@ export default function PersonExpensesPage() {
         </div>
       </div>
 
+      {/* Balance card */}
       <Card className="mb-6">
         <CardHeader className="pb-2">
           <CardTitle className="text-xl">Balance</CardTitle>
@@ -110,6 +111,7 @@ export default function PersonExpensesPage() {
         </CardContent>
       </Card>
 
+      {/* Tabs for expenses and settlements */}
       <Tabs
         defaultValue="expenses"
         value={activeTab}
