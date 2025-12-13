@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { api } from '@/convex/_generated/api'
 import { useConvexQuery } from '@/hooks/use-convex-query'
 import { Plus, User, Users } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BarLoader } from 'react-spinners'
 import Link from 'next/link'
 import CreateGroupModal from './_components/create-group-modal'
@@ -40,8 +40,6 @@ const ContactsPage = () => {
   }
 
   const { users, groups } = data || { users: [], groups: [] };
-
-  console.log(users[0].imageUrl) 
 
   return (
     <div className="container mx-auto py-6">
